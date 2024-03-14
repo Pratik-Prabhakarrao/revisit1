@@ -5,6 +5,24 @@
       "name": "Pratik kuware",
       "email": "Pratikkuware@gmail.com",
       "password": "123456"
+    },
+    {
+      "id": "4eac",
+      "name": "manohar",
+      "email": "manohar@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "2428",
+      "name": "peter",
+      "email": "peter@gmai.com",
+      "password": "123456"
+    },
+    {
+      "id": "0eeb",
+      "name": "Bruce",
+      "email": "Bruce@gmail.com",
+      "password": "123456"
     }
   ]
 }
