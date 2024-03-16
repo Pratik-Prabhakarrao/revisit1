@@ -4,3 +4,9 @@ export interface sSignUp{
     password:string
 
 }
+export interface sLogIn{
+
+    email:string,
+    password:string
+
+}
