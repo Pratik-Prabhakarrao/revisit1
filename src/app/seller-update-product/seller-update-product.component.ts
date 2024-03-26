@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../services/product.service';
 import { product } from 'src/dataType';
 
@@ -11,6 +11,7 @@ import { product } from 'src/dataType';
 export class SellerUpdateProductComponent implements OnInit {
   updateProductMessage:undefined | string;
   route:ActivatedRoute = inject(ActivatedRoute)
+  router:Router =inject(Router)
   // product:ProductService = inject(ProductService) this is also valid and better than calling it in the constructor
   constructor(private product:ProductService){}
   productData:undefined|product;
@@ -23,7 +24,18 @@ export class SellerUpdateProductComponent implements OnInit {
     
   }
   
-  updateProduct(data:any){
-    
+  updateProduct(data:product){
+    if(this.productData){
+      data.id = this.productData.id
+    }
+    this.product.updateProduct(data).subscribe((result)=>{ 
+      if(result){
+        this.updateProductMessage ="Product has been updated"
+      }
+    })
+    setTimeout(() => {
+      this.updateProductMessage= undefined;
+      this.router.navigate(['/seller-home'])
+    }, 3000);
   }
 }

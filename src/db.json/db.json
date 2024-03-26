@@ -249,13 +249,13 @@
   ],
   "products": [
     {
-      "id": "bb96",
       "name": "Car",
       "price": "15000",
       "color": "red",
       "catagory": "motor vehicle",
-      "description": "red car",
-      "image": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Swift/10406/1697698080681/front-left-side-47.jpg"
+      "description": "red car Black car",
+      "image": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Swift/10406/1697698080681/front-left-side-47.jpg",
+      "id": "bb96"
     }
   ]
 }
