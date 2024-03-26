@@ -1,3 +1,4 @@
+import { query } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { product } from 'src/dataType';
@@ -31,4 +32,8 @@ export class ProductService {
   treandyProduct(){
     return this.http.get<product[]>(`http://localhost:3000/products?_limit=10`)
   }
+  searchProducts(query:string){
+    return this.http.get<product[]>(`http://localhost:3000/products?q=${query}`)
+  }
+
 }
