@@ -10,11 +10,34 @@ import { product } from 'src/dataType';
 export class SellerHomeComponent implements OnInit{
 product:ProductService = inject(ProductService);
 productList:undefined | product[];
+productMessage: undefined | string;
 ngOnInit():void{
-this.product.productList().subscribe((result)=>{
-  console.warn(result);
-  this.productList = result;
-  
-})
+this.list();
 }
+deleteProduct(id:number){
+this.product.deleteProduct(id).subscribe((result)=>{
+if(result){
+  this.productMessage = "Product is deleted";
+
+  //to refresh the page after deletign the product
+this.list();
+  
+}
+});
+setTimeout(()=>{
+  this.productMessage = undefined;
+},3000)
+
+
+}
+
+//avoid duplication of get productlist 
+list(){
+  this.product.productList().subscribe((result)=>{
+    console.warn(result);
+    this.productList = result;
+    
+  })
+}
+
 }

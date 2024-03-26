@@ -256,15 +256,6 @@
       "catagory": "motor vehicle",
       "description": "red car",
       "image": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Maruti/Swift/10406/1697698080681/front-left-side-47.jpg"
-    },
-    {
-      "id": "d01e",
-      "name": "apple I Phone",
-      "price": "10000",
-      "color": "black",
-      "catagory": "electronic",
-      "description": "very costly I phone",
-      "image": "https://m.media-amazon.com/images/I/412CKVTe8dL._SY445_SX342_QL70_FMwebp_.jpg"
     }
   ]
 }
