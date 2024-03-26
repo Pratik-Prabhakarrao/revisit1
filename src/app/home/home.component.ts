@@ -11,11 +11,16 @@ export class HomeComponent implements OnInit {
   images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
   product:ProductService = inject(ProductService);
   popularProduct:undefined|product[];
+  treandyProduct:undefined|product[];
+  
   
 
   ngOnInit():void{
     this.product.popularProducts().subscribe((result)=>{
       this.popularProduct =result;
+    })
+    this.product.treandyProduct().subscribe((result)=>{
+      this.treandyProduct = result;
     })
 
   }
