@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { product } from 'src/dataType';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-seller-add-product',
@@ -9,6 +10,7 @@ import { product } from 'src/dataType';
 })
 export class SellerAddProductComponent {
   addProductMessage: undefined | string;
+  router:Router=inject(Router);
 
   product: ProductService = inject(ProductService);
   submitProduct(data: product) {
@@ -19,6 +21,8 @@ export class SellerAddProductComponent {
       }
       setTimeout(() => {
         this.addProductMessage = undefined;
+        this.router.navigate(['/seller-home'])
+
       }, 3000);
     });
   }
