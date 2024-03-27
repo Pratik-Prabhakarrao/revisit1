@@ -52,4 +52,10 @@ export class HeaderComponent {
   hideSearch(){
     this.searchResult= undefined;
   }
+
+  submitSearch(value:string){
+    this.router.navigate([`search/${value}`])
+    
+
+  }
 }
