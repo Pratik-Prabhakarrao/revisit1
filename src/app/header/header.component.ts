@@ -41,7 +41,7 @@ export class HeaderComponent {
 
   searchProduct(query:KeyboardEvent){
     const element = query.target as HTMLInputElement;
-    this.product.searchProducts(element.value).subscribe((result)=>{
+    this.product.searchProduct(element.value).subscribe((result)=>{
       if(result.length>5){
       result.length =5;
       }
@@ -53,8 +53,8 @@ export class HeaderComponent {
     this.searchResult= undefined;
   }
 
-  submitSearch(value:string){
-    this.router.navigate([`search/${value}`])
+  submitSearch(val:string){
+    this.router.navigate([`search/${val}`])
     
 
   }
